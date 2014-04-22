@@ -37,7 +37,7 @@ class PDFKit
     args += @options.to_a.flatten.compact
 
     if @source.html?
-      args << '-' # Get HTML from stdin
+      args << '-q' # Get HTML from stdin
     else
       args << @source.to_s
     end
